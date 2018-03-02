@@ -1,6 +1,8 @@
 package com.spb.cc.spbcc;
 
 import org.mybatis.spring.annotation.MapperScan;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,8 +13,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @MapperScan("com.spb.cc.spbcc.mapper")
 public class SpbccApplication {
+	
+	private static final Logger logger = LoggerFactory.getLogger(SpbccApplication.class);
 
 	public static void main(String[] args) {
+		logger.info("----------------------");
 		SpringApplication.run(SpbccApplication.class, args);
+		logger.info("----------------------");
 	}
 }
